@@ -8,22 +8,24 @@ on:
 
 jobs:
   phpunit:
-
     runs-on: ubuntu-latest
 
     steps:
-
       - uses: actions/checkout@v4
 
       - uses: shivammathur/setup-php@v2
         with:
           php-version: 8.2
-          extensions: mbstring, dom, json
+          extensions: mbstring, dom, json, pdo, pdo_mysql
 
-      - run: composer self-update
+      - name: Update Composer
+        run: composer self-update
 
-      - run: composer install --no-interaction
+      - name: Install Dependencies
+        run: composer install --no-interaction --prefer-dist
 
-      - run: composer dump-autoload
+      - name: Dump Autoload
+        run: composer dump-autoload
 
-      - run: vendor/bin/phpunit tests
+      - name: Run PHPUnit
+        run: ./vendor/bin/phpunit
