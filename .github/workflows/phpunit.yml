@@ -13,29 +13,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup PHP
+      - name: Setup PHP 8.2
         uses: shivammathur/setup-php@v2
         with:
           php-version: 8.2
           extensions: mbstring, dom, json, pdo, pdo_mysql
-          coverage: pcov
 
-      - name: Check PHP Version
-        run: php --version
+      - name: Install Dependencies
+        run: composer install --no-interaction
 
-      - name: Cache Composer packages
-        uses: actions/cache@v3
-        with:
-          path: vendor
-          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-php-
-
-      - name: Composer Install
-        run: composer install --no-interaction --prefer-dist --no-progress
-
-      - name: Check PHPUnit
-        run: ls -la vendor/bin/phpunit && ./vendor/bin/phpunit --version
-
-      - name: Run Tests
+      - name: Run PHPUnit 11.5
         run: ./vendor/bin/phpunit
