@@ -3,7 +3,7 @@
         'name' => 'toko-online-pjbl/project',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '0191109a5aee39e452b1ff159d4637bb3337cc25',
+        'reference' => '85d68c864aeb9542de29af1ed7158138cd0adfe0',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -256,7 +256,7 @@
         'toko-online-pjbl/project' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '0191109a5aee39e452b1ff159d4637bb3337cc25',
+            'reference' => '85d68c864aeb9542de29af1ed7158138cd0adfe0',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
