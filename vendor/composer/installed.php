@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'toko-online-pjbl/project',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '0191109a5aee39e452b1ff159d4637bb3337cc25',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -254,9 +254,9 @@
             'dev_requirement' => true,
         ),
         'toko-online-pjbl/project' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '0191109a5aee39e452b1ff159d4637bb3337cc25',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
